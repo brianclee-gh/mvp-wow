@@ -2,6 +2,25 @@
 const axios = require('axios').default;
 const { authToken } = require('../config.js');
 
+const data = JSON.stringify({
+  query: `query {
+  characterData {
+    character(
+    name: "Entranced",
+    serverSlug: "Stormscale",
+    serverRegion: "us"
+    ) {
+      canonicalID,
+      classID,
+      gameData,
+      name,
+      level,
+    }
+  }
+}`,
+  variables: {},
+});
+
 const options = {
   method: 'GET',
   url: 'https://www.warcraftlogs.com/api/v2/client',
@@ -9,14 +28,13 @@ const options = {
     'Content-Type': 'application/json',
     Authorization: authToken,
   },
-  data: '{"query":"query {\n  characterData {\n    character(\n    name: \"Entranced\",\n    serverSlug: \"Stormscale\",\n    serverRegion: \"us\"\n    ) {\n      canonicalID,\n classID,\n      name,\n      level,\n    }\n  } \n}"}',
+  data,
 };
 
 module.exports = {
   getCharacter: (req, res) => {
     axios.request(options).then((response) => {
-      console.log(response.data);
-      res.send(response.data);
+      res.send(response.data.data.characterData);
     }).catch((error) => {
       console.error(error);
     });

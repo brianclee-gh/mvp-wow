@@ -1,15 +1,6 @@
 # WoW.gg
 ### A data aggregate site for WoW players
 
-## Features
-- Create an account to track books you've read or are interested in!
-- Discover new books
-- Search and find existing books
-- Rate and favorite/star books
-- Homepage should display popular books
-
-# wow.gg #
-
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
 
@@ -27,22 +18,22 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Sub-Heading ##
-A data aggregate site for WoW players
+> A data aggregate site for WoW players
 
 ## Summary ##
-See how your character compares to the best players in the game! Wow.gg strives to deliver a detailed, precise data about top World of Warcraft characters from their gear, covenant choices, conduits, and talents.
+> See how your character compares to the best players in the game! Wow.gg strives to deliver a detailed, precise data about top World of Warcraft characters from their gear, covenant choices, conduits, and talents.
 
 ## Problem ##
-Creating a clean site
+> Creating a clean site
 
 ## Solution ##
-This project will utilize a React framework that communicates with an Express server and Postgres database to create a fast and efficient system.
+> This project will utilize a React framework that communicates with an Express server and Postgres database to create a fast and efficient system.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##
-Users should be able to browse through public data of top logs or search themselves and see their own character
+> Users should be able to browse through public data of top logs or search themselves and see their own character
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
