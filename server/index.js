@@ -1,6 +1,7 @@
 const express = require('express');
 const compression = require('compression');
 const morgan = require('morgan');
+const router = require('./routes');
 
 const PORT = 3000;
 
@@ -11,6 +12,8 @@ app.use(compression());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/', router);
 
 app.use(express.static(`${__dirname}/../client/dist`));
 
